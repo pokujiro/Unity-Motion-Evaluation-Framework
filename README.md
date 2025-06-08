@@ -12,7 +12,7 @@ Core algorithms of a VR-based motion learning support system that considers indi
 
 *(ここに論文の図6.7や図6.9のような、動作の様子がわかるGIFアニメーションや動画へのリンクを貼ることを強くお勧めします。PCの画面録画機能などで簡単に作成できます。)*
 
-![demo-gif](https://github.com/pokujiro/Unity-Motion-Evaluation-Framework/assets/DEMO.png)  
+![demo-gif](https://github.com/pokujiro/Unity-Motion-Evaluation-Framework/assets/Demo.png)  
 
 ## 技術的ハイライト (Technical Highlights)
 ### 1. 体格差補正 (論文 6.3.2章)
