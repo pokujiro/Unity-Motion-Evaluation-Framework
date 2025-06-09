@@ -2,27 +2,27 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>
-/// ƒXƒNƒŠƒvƒg“à‚Å‚P‚W‚Oiy²j‰ñ“]‚µ‚Ä‚¢‚é
-/// ƒCƒ“ƒXƒyƒNƒ^[‚ÅÄ¶ˆÊ’u‚ÍŒˆ‚ß‚éB
+/// ã‚¹ã‚¯ãƒªãƒ—ãƒˆå†…ã§ï¼‘ï¼˜ï¼ï¼ˆyè»¸ï¼‰å›è»¢ã—ã¦ã„ã‚‹
+/// ã‚¤ãƒ³ã‚¹ãƒšã‚¯ã‚¿ãƒ¼ã§å†ç”Ÿä½ç½®ã¯æ±ºã‚ã‚‹ã€‚
 /// </summary>
 
 public class MaintainInitialPosition : MonoBehaviour
 {
-    public Transform tracker; // ƒgƒ‰ƒbƒJ[‚ÌTransform
+    public Transform tracker; // ãƒˆãƒ©ãƒƒã‚«ãƒ¼ã®Transform
     private Vector3 initialTrackerPosition;
     private Quaternion initialTrackerRotation;
     private Vector3 initialObjectPosition;
     private Quaternion initialObjectRotation;
     private bool isInitialized = false;
     private int frameCounter = 0;
-    private int initializationDelayFrames = 5; // 5ƒtƒŒ[ƒ€Œã‚É‰ŠúˆÊ’u‚ğ‹L˜^
+    private int initializationDelayFrames = 5; // 5ãƒ•ãƒ¬ãƒ¼ãƒ å¾Œã«åˆæœŸä½ç½®ã‚’è¨˜éŒ²
 
-    [SerializeField] private InputActionReference CaliblationButton; // Stopƒ{ƒ^ƒ““ü—Í
+    [SerializeField] private InputActionReference CaliblationButton; // Stopãƒœã‚¿ãƒ³å…¥åŠ›
 
     void Start()
     {
         initialObjectPosition = transform.position;
-        Debug.Log($"‰ŠúˆÊ’u{initialObjectPosition}");
+        Debug.Log($"åˆæœŸä½ç½®{initialObjectPosition}");
     }
 
     void Update()
@@ -43,7 +43,7 @@ public class MaintainInitialPosition : MonoBehaviour
             Debug.Log(" Calliblation ");
         }
 
-        // ‚P‚W‚O‰ñ“]‚µ‚Ä‚àÀ•WŒn‚Ì²‚ÌŒü‚«‚Í•Ï‚í‚Á‚Ä‚¢‚È‚¢H
+        // ï¼‘ï¼˜ï¼å›è»¢ã—ã¦ã‚‚åº§æ¨™ç³»ã®è»¸ã®å‘ãã¯å¤‰ã‚ã£ã¦ã„ãªã„ï¼Ÿ
         Vector3 targetPosition = tracker.position;
         Vector3 targetDistance = targetPosition - initialTrackerPosition;
         transform.position = new Vector3(targetDistance.x, targetDistance.y, -targetDistance.z) + initialObjectPosition + initialTrackerPosition;
